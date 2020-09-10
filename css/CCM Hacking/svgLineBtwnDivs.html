@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="svgLineBtwnDivs.js"></script>
+    <link rel="stylesheet" href="svgLBDstyles.css">
+</head>
+
+<body onresize="svgLbdOnresize()">
+    <div id="one" class="point"></div>
+    <div id="two" class="point"></div>
+    <svg id="svg">
+        <line id="line" />
+    </svg>
+
+    <script>
+        svgLbdOnresize();
+    </script>
+
+</body>
+
+</html>
