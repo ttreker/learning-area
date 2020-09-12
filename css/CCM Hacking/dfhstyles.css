@@ -1,0 +1,23 @@
+.root {
+    background-color: red;
+    display: flex;
+    align-items: center;
+   
+    
+  }
+  
+  .container {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+  }
+  
+  .cell {
+    background-color: white;
+    height: 30px;
+  }
+  
+  
