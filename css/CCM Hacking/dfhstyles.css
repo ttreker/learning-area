@@ -18,20 +18,25 @@
   }
   
   .data {
-    background-color: rgb(190, 141, 223);
-    color: rgb(10, 8, 153);
+    background-color: rgb(243, 219, 7);
+    color: rgb(69, 3, 145);
     font-weight: bold;
-    margin: 5px;
-    height: 30px;
+    margin: 3px;
+    /* height: 30px; */
     border-width: 3px;
     border-color: black;
-    border-style: solid;
-    padding: 0.75em;  
+    border-style: ridge;
+    border-radius: 8px;
+    padding: 0.2em;  
     /* padding: -0.5em 5px -0.75em 5px;  */
 
     /* box-sizing: content-box; */
-    /* display: initial; */
+    display: inline-block;
     /* line-height: 10%; */
+  }
+
+  .ghost {
+    visibility: hidden;
   }
 
   
