@@ -1,38 +1,29 @@
 .parent {
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* margin 0 auto; */
    
     
   }
   
   .child-row {
-    /* background-color: rgb(222, 243, 129); */
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    /* height: 50px; */
   }
   
   .data {
+    display: inline-block;
     background-color: rgb(243, 219, 7);
     color: rgb(69, 3, 145);
     font-weight: bold;
     margin: 3px;
-    /* height: 30px; */
     border-width: 3px;
     border-color: black;
     border-style: ridge;
     border-radius: 8px;
     padding: 0.2em;  
-    /* padding: -0.5em 5px -0.75em 5px;  */
-
-    /* box-sizing: content-box; */
-    display: inline-block;
-    /* line-height: 10%; */
   }
 
   .ghost {
