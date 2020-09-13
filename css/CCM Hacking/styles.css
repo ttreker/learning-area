@@ -1,25 +1,33 @@
-.tree ul {
+.tree .ul {
    display: flex;
    flex-flow: column;
    align-items: center;
    background-color: yellow;
 }
 
-.tree li {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.tree .li, .tree .liocl {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
 }
 
-.tree li ul {
+.tree .liocl {
+   align-items: flex-start;
+}
+
+.tree .dataocl {
+    width: 150%;
+}
+
+.tree .li .ul {
    display: flex;
    flex-flow: row;
-   justify-content: start;
+   justify-content: center;
    align-items: center;
    background-color: green;
 }
 
-.tree li div{
+.tree .li .data, .tree .liocl .dataocl {
     border: 1px solid #ccc;
     padding: 0.5em;
     margin: 0.5em;
@@ -46,14 +54,18 @@
    background-color: rgb(117, 0, 128);
 }
 
-.tree li div:hover, .tree li div:hover + ul li div {
+.tree .li .data:hover,
+.tree .li .data:hover + .ul .li .data,
+.tree .li .data:hover + .ul .liocl .data,
+.tree .li .liocl .dataocl:hover,
+.tree .li .liocl .data:hover + .ul .li .dataocl {
     background: #c8e4f8;
     color: #000;
     border: 3px solid #94a0b4;
 }
-.tree li div:hover + ul li::after, 
-.tree li div:hover + ul li::before, 
-.tree li div:hover + ul::before, 
-.tree li div:hover + ul ul::before{
+.tree .li .data:hover + .ul .li::after,
+.tree .li .data:hover + .ul .li::before, 
+.tree .li .data:hover + .ul::before, 
+.tree .li .data:hover + .ul .ul::before{
     border-color: #94a0b4;
 }
