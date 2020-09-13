@@ -9,7 +9,7 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script>
     function drawConnector($pdiv, $cdiv) {
-      let $line = $cdiv.siblings("svg").eq(0).children("#line").eq(0);
+      let $line = $cdiv.siblings("svg").children("#line");
 
       let x1 = $pdiv.offset().left + ($pdiv.width() / 2);
       let y1 = $pdiv.offset().top + ($pdiv.outerHeight());
@@ -27,12 +27,11 @@
 
         // Parent .data div
         let $pdiv = $(pdiv);
-        // let $el = $pdiv;
 
         // Draw a connecting line between the parent and all non-ghost children
-        $pdiv.siblings(".child-row").eq(0).children(".parent").each((i, cpdiv) => {
+        $pdiv.siblings(".child-row").children(".parent").each((i, cpdiv) => {
           let $cpdiv = $(cpdiv);
-          let $cdiv = $cpdiv.children(".data").eq(0);
+          let $cdiv = $cpdiv.children(".data");
           if ($cdiv.length) {
             drawConnector($pdiv, $cdiv);
           }
