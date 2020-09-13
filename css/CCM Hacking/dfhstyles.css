@@ -13,12 +13,12 @@
     justify-content: space-between;
   }
   
-  .data {
+  .data, .ghostData {
     display: inline-block;
     background-color: rgb(243, 219, 7);
     color: rgb(69, 3, 145);
     font-weight: bold;
-    margin: 3px;
+    margin: 20px 3px;
     border-width: 3px;
     border-color: black;
     border-style: ridge;
@@ -26,9 +26,20 @@
     padding: 0.2em;  
   }
 
-  .ghost {
+  .ghostData {
     visibility: hidden;
   }
 
-  
+  #line {
+    stroke-width:2px;
+    stroke:rgb(0,0,0);
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   

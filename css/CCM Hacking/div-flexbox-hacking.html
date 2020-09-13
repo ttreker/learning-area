@@ -5,25 +5,70 @@
   <meta charset="utf-8">
   <title>Flexbox Binary Tree Test 1</title>
   <link rel="stylesheet" href="dfhstyles.css">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    function drawConnector($pdiv, $cdiv) {
+      let $line = $cdiv.siblings("svg").eq(0).children("#line").eq(0);
+
+      let x1 = $pdiv.offset().left + ($pdiv.width() / 2);
+      let y1 = $pdiv.offset().top + ($pdiv.outerHeight());
+      let x2 = $cdiv.offset().left + ($cdiv.width() / 2);
+      let y2 = $cdiv.offset().top;
+
+      $line.attr('x1', x1).attr('y1', y1).attr('x2', x2).attr('y2', y2);
+
+      console.log($line[0]);
+
+    }
+
+    function drawConnectors() {
+      $(".data").each((i, pdiv) => {
+
+        // Parent .data div
+        let $pdiv = $(pdiv);
+        // let $el = $pdiv;
+
+        // Draw a connecting line between the parent and all non-ghost children
+        $pdiv.siblings(".child-row").eq(0).children(".parent").each((i, cpdiv) => {
+          let $cpdiv = $(cpdiv);
+          let $cdiv = $cpdiv.children(".data").eq(0);
+          if ($cdiv.length) {
+            drawConnector($pdiv, $cdiv);
+          }
+        })
+      })
+    }
+
+  </script>
 </head>
 
-<body>
+<body onresize="drawConnectors()">
   <div class="parent">
     <div class="data">
       Now time men
     </div>
     <div class="child-row">
       <div class="parent">
+        <svg id="svg">
+          <line id="line" />
+        </svg>
         <div class="data">
           By that whence
         </div>
         <div class="child-row">
           <div class="parent">
+            <svg id="svg">
+              <line id="line" />
+            </svg>
             <div class="data">
               Ke duonhore estis
             </div>
           </div>
           <div class="parent">
+            <svg id="svg">
+              <line id="line" />
+            </svg>
             <div class="data">
               Einst lied und.
             </div>
@@ -31,79 +76,108 @@
         </div>
       </div>
       <div class="parent">
+        <svg id="svg">
+          <line id="line" />
+        </svg>
         <div class="data">
           Hall any of
         </div>
         <div class="child-row">
           <div class="parent">
+            <svg id="svg">
+              <line id="line" />
+            </svg>
             <div class="data">
               Hall joyless sea
             </div>
             <div class="child-row">
               <div class="parent">
-                <div class="data ghost">
+                <svg id="svg">
+                  <line id="line" />
+                </svg>
+                <div class="ghostData">
                   By that whence
                 </div>
               </div>
               <div class="parent">
+                <svg id="svg">
+                  <line id="line" />
+                </svg>
                 <div class="data">
                   By that whence
                 </div>
                 <div class="child-row">
                   <div class="parent">
+                    <svg id="svg">
+                      <line id="line" />
+                    </svg>
                     <div class="data">
                       Ke duonhore estis
                     </div>
                   </div>
                   <div class="parent">
+                    <svg id="svg">
+                      <line id="line" />
+                    </svg>
                     <div class="data">
                       Einst lied und.
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="parent">
-              </div>
             </div>
           </div>
           <div class="parent">
+            <svg id="svg">
+              <line id="line" />
+            </svg>
             <div class="data">
               Hall any of
             </div>
             <div class="child-row">
               <div class="parent">
+                <svg id="svg">
+                  <line id="line" />
+                </svg>
                 <div class="data">
                   Hall joyless sea
                 </div>
                 <div class="child-row">
                   <div class="parent">
-                    <div class="data ghost">
+                    <div class="ghostData">
                       By that whence
                     </div>
                   </div>
                   <div class="parent">
+                    <svg id="svg">
+                      <line id="line" />
+                    </svg>
                     <div class="data">
                       By that whence
                     </div>
                     <div class="child-row">
                       <div class="parent">
+                        <svg id="svg">
+                          <line id="line" />
+                        </svg>
                         <div class="data">
                           Ke duonhore estis
                         </div>
                       </div>
                       <div class="parent">
+                        <svg id="svg">
+                          <line id="line" />
+                        </svg>
                         <div class="data">
                           Einst lied und.
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="parent">
-                  </div>
                 </div>
               </div>
               <div class="parent">
-                <div class="data ghost">
+                <div class="ghostData">
                   Hall joyless sea
                 </div>
               </div>
@@ -111,6 +185,11 @@
           </div>
         </div>
       </div>
+
+      <script>
+        $(document).ready(drawConnectors());
+      </script>
+
 </body>
 
 </html>
