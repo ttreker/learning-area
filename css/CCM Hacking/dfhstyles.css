@@ -15,12 +15,12 @@
   
   .data, .ghostData {
     display: inline-block;
-    background-color: rgb(243, 219, 7);
-    color: rgb(69, 3, 145);
+    background-color: rgba(214, 152, 71, 0.575);
+    color: rgb(4, 19, 156);
     font-weight: bold;
     margin: 20px 3px;
-    border-width: 3px;
-    border-color: black;
+    border-width: 6px;
+    border-color: rgb(93, 116, 170);
     border-style: ridge;
     border-radius: 8px;
     padding: 0.2em;  
@@ -43,3 +43,7 @@
     height: 100%;
   }
   
+  /* .parent > .data:hover + .child-row { */
+  /* .parent > div:hover {
+    background: #c8e4f8; color: #000; border: 1px solid #94a0b4
+  } */

@@ -11,9 +11,9 @@
     function drawConnector($pdiv, $cdiv) {
       let $line = $cdiv.siblings("svg").children("#line");
 
-      let x1 = $pdiv.offset().left + ($pdiv.width() / 2);
+      let x1 = $pdiv.offset().left + ($pdiv.outerWidth() / 2);
       let y1 = $pdiv.offset().top + ($pdiv.outerHeight());
-      let x2 = $cdiv.offset().left + ($cdiv.width() / 2);
+      let x2 = $cdiv.offset().left + ($cdiv.outerWidth() / 2);
       let y2 = $cdiv.offset().top;
 
       $line.attr('x1', x1).attr('y1', y1).attr('x2', x2).attr('y2', y2);
@@ -38,6 +38,13 @@
         })
       })
     }
+
+    // function adjustGhostSize() {
+    //   $(".ghostData").each( (i, gdiv) => {
+    //     let $gdiv = $(gdiv);
+
+    //   }
+    // }
 
   </script>
 </head>
