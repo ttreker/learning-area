@@ -12,11 +12,21 @@
             font: .9em/1.2 Arial, Helvetica, sans-serif;
         }
 
-        .container > div {
+        .container {
+            display: grid;
+            /* grid-template-columns: 200px 200px 200px; */
+            /* grid-template-columns: 1fr repeat(2,2fr); */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px, auto);
+            gap: 20px;
+        }
+
+        .container>div {
             border-radius: 5px;
             padding: 10px;
-            background-color: rgb(207,232,220);
-            border: 2px solid rgb(79,185,227);
+            background-color: rgb(207, 232, 220);
+            border: 2px solid rgb(79, 185, 227);
         }
     </style>
 </head>
@@ -28,7 +38,7 @@
         <div>One</div>
         <div>Two</div>
         <div>Three</div>
-        <div>Four</div>
+        <div>Four: Throws some explore discourse yore stayed said swung the spoken desert. Something while burden the i, if days pallas said door within my, entrance and shore seeming and at. Nevermore sent the the wheeled or we, my floor agreeing and.</div>
         <div>Five</div>
         <div>Six</div>
         <div>Seven</div>

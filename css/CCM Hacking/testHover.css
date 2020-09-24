@@ -1,12 +1,13 @@
 .test {
+    background-color: rgb(228, 153, 199);
     color: blue;
-    background-color: yellow;
     border: 3px solid black;
     align-self: auto;
     margin: auto;
 }
 
 div.test:hover {
-    background-color: rgb(146, 68, 116);
-    border: none;
+    background-color: yellow;
+    color: rgb(228, 2, 2);
+    border: 6px solid rgb(3, 199, 52);
 }
