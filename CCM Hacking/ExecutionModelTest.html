@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("div").each(function (i, el) {
+          setTimeout(() => {alert("I am going to hide the top list")}, 0);
+          $(el).children().hide();
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <button>Alert the value of each list item</button>
+
+  <ul>
+    <div>
+      <li>Coffee</li>
+      <li>Milk</li>
+      <li>Soda</li>
+    </div>
+    <br>
+    <div>
+      <li>Coffee</li>
+      <li>Milk</li>
+      <li>Soda</li>
+    </div>
+  </ul>
+
+</body>
+
+</html>
