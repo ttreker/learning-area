@@ -7,7 +7,7 @@
     $(document).ready(function () {
       $("button").click(function () {
         $("div").each(function (i, el) {
-          setTimeout(() => {alert("I am going to hide the top list")}, 0);
+          alert("I am going to hide the top list");
           $(el).children().hide();
         });
       });
@@ -17,7 +17,7 @@
 
 <body>
 
-  <button>Alert the value of each list item</button>
+  <button>Do some hiding</button>
 
   <ul>
     <div>
