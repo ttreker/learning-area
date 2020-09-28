@@ -7,8 +7,8 @@
     $(document).ready(function () {
       $("button").click(function () {
         $("div").each(function (i, el) {
-          alert("I am going to hide the top list");
-          $(el).children().hide();
+          setTimeout(() => alert("I am going to hide the top list"), 0);
+          setTimeout( () => $(el).children().hide(), 0);
         });
       });
     });
