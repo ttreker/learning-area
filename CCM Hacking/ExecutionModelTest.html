@@ -3,12 +3,21 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  </style>
   <script>
     $(document).ready(function () {
       $("button").click(function () {
-        $("div").each(function (i, el) {
+        $(".row").children().each(function (i, ldiv) {
+          $ldiv = $(ldiv);
+          $ul = $ldiv.children();
           setTimeout(() => alert("I am going to hide the top list"), 0);
-          setTimeout( () => $(el).children().hide(), 0);
+          setTimeout(() => $ul.hide(), 0);
         });
       });
     });
@@ -19,19 +28,22 @@
 
   <button>Do some hiding</button>
 
-  <ul>
-    <div>
-      <li>Coffee</li>
-      <li>Milk</li>
-      <li>Soda</li>
+  <div class="row">
+    <div class="list">
+      <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Soda</li>
+      </ul>
     </div>
-    <br>
-    <div>
-      <li>Coffee</li>
-      <li>Milk</li>
-      <li>Soda</li>
+    <div class="list">
+      <ul>
+        <li>Peanuts</li>
+        <li>Cashews</li>
+        <li>Macedamia Nuts</li>
+      </ul>
     </div>
-  </ul>
+  </div>
 
 </body>
 
